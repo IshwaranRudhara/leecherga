@@ -41,7 +41,7 @@ async def help_message_f(client, message):
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
-    await message.reply_text("""Hi, Sir. \nThis is **Telegram Leecher**. \n\n<b><a href="https://t.me/Discovery_Updates/7">How to use me?</a></b>""",
+    await message.reply_text("""Hi, Sir. \nThis is **Telegram Leecher**. \n\n<a href="https://t.me/Discovery_Updates/7">How to use me?</a>""",
         disable_web_page_preview=True,
         quote=True,
         reply_markup=reply_markup
