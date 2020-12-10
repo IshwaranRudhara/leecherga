@@ -38,32 +38,13 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    #inline_keyboard = []
-    #inline_keyboard.append([
-        #pyrogram.InlineKeyboardButton(
-            #text="Help",
-            #url="https://t.me/Discovery_Updates/7"
-        #)
-    #])
-    #reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
-    await message.reply_text("""Hi, Sir. \nThis is **Telegram Leecher**. \n\n<a href="https://t.me/Discovery_Updates/7">How to use me?</a>""",
-        disable_web_page_preview=True
-        #quote=True,
-        #reply_markup=reply_markup
+    await message.reply_text(
+        text="Hi, Sir. \nThis is **Telegram Leecher**. \nWelcome to **Project Mirror**. ",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('How to use me?', url='https://t.me/Discovery_Updates/7')
+                ]
+            ]
+        )
     )
-
-
-# async def rename_message_f(client, message):
-#     inline_keyboard = []
-#     inline_keyboard.append([
-#         pyrogram.InlineKeyboardButton(
-#             text="read this?",
-#             url="https://t.me/keralagram/698909"
-#         )
-#     ])
-#     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
-#     await message.reply_text(
-#         "please use @renamebot",
-#         quote=True,
-#         reply_markup=reply_markup
-#     )
