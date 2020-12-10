@@ -38,18 +38,18 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    inline_keyboard = []
-    inline_keyboard.append([
-        pyrogram.InlineKeyboardButton(
-            text="Help",
-            url="https://t.me/Discovery_Updates/7"
-        )
-    ])
-    reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
+    #inline_keyboard = []
+    #inline_keyboard.append([
+        #pyrogram.InlineKeyboardButton(
+            #text="Help",
+            #url="https://t.me/Discovery_Updates/7"
+        #)
+    #])
+    #reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text("""Hi, Sir. \nThis is **Telegram Leecher**. \n\n<a href="https://t.me/Discovery_Updates/7">How to use me?</a>""",
-        disable_web_page_preview=True,
-        quote=True,
-        reply_markup=reply_markup
+        disable_web_page_preview=True
+        #quote=True,
+        #reply_markup=reply_markup
     )
 
 
