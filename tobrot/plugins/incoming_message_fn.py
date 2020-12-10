@@ -48,8 +48,8 @@ async def incoming_purge_message_f(client, message):
 async def incoming_message_f(client, message):
     """/leech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤗</a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("Please Wait ...", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -101,15 +101,15 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "Command is invalid! \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤗</a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("Please Wait ...", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -166,8 +166,8 @@ async def incoming_gdrive_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     g_id = message.from_user.id
-    credit = await message.reply_text(f"💀 Downloading for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"Downloading ... <a href='tg://user?id={g_id}'>🤗</a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("Please Wait ...", quote=True)
     # LOGGER.info(message)
     # extract link from message
     dl_url, cf_name, yt_dl_user_name, yt_dl_pass_word = await extract_link(
@@ -215,20 +215,20 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "Command is invalid! \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #playlist
 async def g_yt_playlist(client, message):
     """ /pytdl command """
-    #i_m_sefg = await message.reply_text("Processing...you should wait🤗", quote=True)
+    #i_m_sefg = await message.reply_text("Processing ... Please Wait 🤗 \n", quote=True)
     usr_id = message.from_user.id
     G_DRIVE = False
     if len(message.command) > 1:
         if message.command[1] == "gdrive":
             G_DRIVE = True
     if 'youtube.com/playlist' in message.reply_to_message.text:
-        i_m_sefg = await message.reply_text("Downloading...you should wait🤗", quote=True)
+        i_m_sefg = await message.reply_text("Downloading ... Please Wait 🤗", quote=True)
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
     
     else:
@@ -283,7 +283,7 @@ async def rename_tg_file(client, message):
                 message_to_send += "</a>"
                 message_to_send += "\n"
             if message_to_send != "":
-                mention_req_user = f"<a href='tg://user?id={usr_id}'>Your Requested Files</a>\n\n"
+                mention_req_user = f"<a href='tg://user?id={usr_id}'>Your Requested Files</a>\n\n\n"
                 message_to_send = mention_req_user + message_to_send
                 message_to_send = message_to_send + "\n\n" + "#uploads"
             else:
