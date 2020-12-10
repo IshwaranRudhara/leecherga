@@ -33,12 +33,20 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
-    #channel_id = str(AUTH_CHANNEL)[4:]
-    #message_id = 99
-    # display the /help
-    
-    await message.reply_text("""Hi, Sir. \nThis is **Telegram Leecher**.""", disable_web_page_preview=True)
+    inline_keyboard = []
+    inline_keyboard.append([
+        pyrogram.InlineKeyboardButton(
+            text="Help",
+            url="https://t.me/Discovery_Updates/7"
+        )
+    ])
+    reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
+    await message.reply_text(
+        "Hi, Sir. \nThis is **Telegram Leecher**. \n\n<b><a href="https://t.me/Discovery_Updates/7">How to use me?</a></b>",
+        disable_web_page_preview=True,
+        quote=True,
+        reply_markup=reply_markup
+    )
 
 
 # async def rename_message_f(client, message):
