@@ -13,6 +13,11 @@ LOGGER = logging.getLogger(__name__)
 
 import pyrogram
 
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message
+)
 
 from tobrot import (
     AUTH_CHANNEL
