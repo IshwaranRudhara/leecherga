@@ -43,7 +43,7 @@ async def help_message_f(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('How to use me?', url='https://t.me/Discovery_Updates/7')
+                    InlineKeyboardButton('How to use me?', url='https://t.me/Discovery_Updates/104')
                 ]
             ]
         )
