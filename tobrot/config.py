@@ -47,7 +47,7 @@ class Config(object):
     STATUS_COMMAND = "status@Leeching_Robot"
     SAVE_THUMBNAIL = "savethumbnail@Leeching_Robot"
     CLEAR_THUMBNAIL = "clearthumbnail@Leeching_Robot"
-    UPLOAD_AS_DOC = "False"
+    UPLOAD_AS_DOC = "True"
     PYTDL_COMMAND_G = "pytdl@Leeching_Robot"
     LOG_COMMAND = "log"
     CLONE_COMMAND_G = "gclone"
